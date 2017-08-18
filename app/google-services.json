@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "390065213352",
+    "firebase_url": "https://addemo-e6fec.firebaseio.com",
+    "project_id": "addemo-e6fec",
+    "storage_bucket": "addemo-e6fec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390065213352:android:696abdaa44e25651",
+        "android_client_info": {
+          "package_name": "com.example.administrator.addemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390065213352-thaf214r66l35s17ocmoaj8otk2ir1en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmMH5XkXxEqPz1zCSfcJhSZpNlww6hKEg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

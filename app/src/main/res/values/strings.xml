@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AdDemo</string>
+    <string name="facebook_app_id">116876745628038</string>
+    <string name="show_ad">showAd</string>
+    <string name="native_Ad">NativeAd</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4562829771983924/4857561669</string>
+    <string name="banner_ad_unit_id_new">ca-app-pub-7540938745394762/6064456939</string>
+    <string name="interstitial_unit_id">ca-app-pub-4562829771983924/4170401614</string>
+    <string name="interstitial_unit_id_test">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="google_admob_banner">google admod banner</string>
+    <string name="admob_banner">AdMobBanner</string>
+    <string name="action_settings">Settings</string>
+    <string name="impossible_game">impossible game</string>
+    <string name="admob_interstitial">admob_interstitial</string>
+    <string name="cloud_mobi">cloud_mobi</string>
+</resources>
