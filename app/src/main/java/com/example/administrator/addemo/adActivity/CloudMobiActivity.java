@@ -1,4 +1,4 @@
-package com.example.administrator.addemo;
+package com.example.administrator.addemo.adActivity;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import com.cloudtech.ads.core.CTImageRatioType;
 import com.cloudtech.ads.core.CTNative;
 import com.cloudtech.ads.core.CTService;
 import com.cloudtech.ads.utils.YeLog;
+import com.example.administrator.addemo.MyApplication;
+import com.example.administrator.addemo.R;
 import com.example.administrator.addemo.config.Config;
 import com.example.administrator.addemo.listener.MyCTAdEventListener;
 import com.facebook.drawee.view.SimpleDraweeView;

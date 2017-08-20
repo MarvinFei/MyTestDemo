@@ -39,13 +39,13 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
 
-        <activity android:name=".MyNativeAdActivity"></activity>
+        <activity android:name=".adActivity.MyNativeAdActivity"></activity>
 
-        <activity android:name=".AdmobBannerActivity"></activity>
+        <activity android:name=".adActivity.AdmobBannerActivity"></activity>
 
-        <activity android:name=".AdmobInterstitialActivity"></activity>
+        <activity android:name=".adActivity.AdmobInterstitialActivity"></activity>
 
-        <activity android:name=".CloudMobiActivity"></activity>
+        <activity android:name=".adActivity.CloudMobiActivity"></activity>
 
         <meta-data android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"/>

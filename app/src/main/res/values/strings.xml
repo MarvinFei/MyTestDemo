@@ -13,4 +13,6 @@
     <string name="impossible_game">impossible game</string>
     <string name="admob_interstitial">admob_interstitial</string>
     <string name="cloud_mobi">cloud_mobi</string>
+    <string name="navigation_drawer_open">MyAdDemo</string>
+    <string name="navigation_drawer_close">MyAdDemo</string>
 </resources>

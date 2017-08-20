@@ -1,4 +1,4 @@
-package com.example.administrator.addemo;
+package com.example.administrator.addemo.adActivity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.addemo.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;

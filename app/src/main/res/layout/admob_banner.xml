@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="20dp"
-    tools:context=".AdmobBannerActivity"
+    tools:context=".adActivity.AdmobBannerActivity"
     tools:ignore="MergeRootFrame"
     >
 
