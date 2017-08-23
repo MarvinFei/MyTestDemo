@@ -6,10 +6,10 @@ import android.widget.TextView;
 
 import com.example.administrator.addemo.R;
 
-import butterknife.BindView;
+//import butterknife.BindView;
 
 /**
- * Created by Administrator on 2017/8/20.
+ * Created by LYF on 2017/8/20.
  */
 
 public class NewsFragment extends BaseFragment {

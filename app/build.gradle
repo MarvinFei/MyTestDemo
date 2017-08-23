@@ -25,19 +25,19 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     //    compile 'com.facebook.android:audience-network-sdk:4.+'
     testCompile 'junit:junit:4.12'
-    compile 'com.facebook.android:audience-network-sdk:4.25.0'
-    compile 'com.facebook.android:facebook-android-sdk:4.25.0'
+    compile 'com.facebook.android:audience-network-sdk:4.23+'
+    compile 'com.facebook.android:facebook-android-sdk:4.23+'
     compile 'com.google.android.gms:play-services-ads:11.0.2'
     compile 'com.google.firebase:firebase-ads:11.0.2'
     compile files('libs/cloudssp_1.7.6.jar')
     compile 'com.facebook.fresco:fresco:1.5.0'
-
-    compile 'com.jakewharton:butterknife:8.8.1'
-    compile 'com.jakewharton:butterknife-compiler:8.8.1'
+//
+//    compile 'com.jakewharton:butterknife:8.8.1'
+//    compile 'com.jakewharton:butterknife-compiler:8.8.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

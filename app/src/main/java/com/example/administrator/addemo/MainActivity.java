@@ -15,28 +15,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.administrator.addemo.adActivity.AdmobBannerActivity;
-import com.example.administrator.addemo.adActivity.AdmobInterstitialActivity;
-import com.example.administrator.addemo.adActivity.CloudMobiActivity;
-import com.example.administrator.addemo.adActivity.MyNativeAdActivity;
+import com.example.administrator.addemo.activity.NavigationViewActivity.manageActivity;
+import com.example.administrator.addemo.activity.adActivity.AdmobBannerActivity;
+import com.example.administrator.addemo.activity.adActivity.AdmobInterstitialActivity;
+import com.example.administrator.addemo.activity.adActivity.CloudMobiActivity;
+import com.example.administrator.addemo.activity.adActivity.MyNativeAdActivity;
 import com.example.administrator.addemo.adapter.MainViewPageAdapter;
-import com.example.administrator.addemo.adapter.MyRecyclerAdapter;
 
-import butterknife.BindView;
+//import butterknife.BindView;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,NavigationView.OnNavigationItemSelectedListener{
-
-    private Button mButton;
-    private Button nativeAd;
-    private Button admobBannerButton;
-    private Button admobInterstitialButton;
-    private Button cloudMobiButton;
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
 //    @BindView(R.id.main_tablayout)
-//    TabLayout mTabLayout;
+    TabLayout mTabLayout;
 //    @BindView(R.id.main_viewpager)
-//    ViewPager mViewPager;
+    ViewPager mViewPager;
 
 
     @Override
@@ -46,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        MobileAds.initialize(this, ADMOB_ADDEMO_ID);
         initView();
-//        createView();
+        createView();
     }
 
     private void initView(){
@@ -63,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        mTabLayout = (TabLayout)findViewById(R.id.main_tablayout);
+        mViewPager = (ViewPager)findViewById(R.id.main_viewpager);
+
         DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
         //toolbar带旋转开关按钮
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolBar,
@@ -77,25 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-        mButton = (Button)findViewById(R.id.show_button);
-        nativeAd = (Button)findViewById(R.id.my_native_ad);
-        admobBannerButton = (Button)findViewById(R.id.admob_banner_button);
-        admobInterstitialButton = (Button)findViewById(R.id.admob_interstitial_button);
-        cloudMobiButton = (Button)findViewById(R.id.cloud_mobi_button);
-        mButton.setOnClickListener(this);
-        nativeAd.setOnClickListener(this);
-        admobBannerButton.setOnClickListener(this);
-        admobInterstitialButton.setOnClickListener(this);
-        cloudMobiButton.setOnClickListener(this);
-
     }
-
-//    private void createView(){
-//        mViewPager.setAdapter(new MainViewPageAdapter(this, this.getSupportFragmentManager()));
-//        mTabLayout.setupWithViewPager(mViewPager);
-//    }
-
+//
+    private void createView(){
+        mViewPager.setAdapter(new MainViewPageAdapter(this, this.getSupportFragmentManager()));
+        mTabLayout.setupWithViewPager(mViewPager);
+    }
 
     @Override
     public void onBackPressed()
@@ -112,44 +96,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public boolean onNavigationItemSelected(MenuItem item)
     {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        // Handle navigation view item clicks here.
+        switch (item.getItemId()){
+            case R.id.nav_camera:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_gallery:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_slideshow:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_manage:
+                Intent intent = new Intent(this, manageActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_share:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.nav_send:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+            default:
+                drawer.closeDrawer(GravityCompat.START);
+                break;
+        }
         return true;
     }
 
-
-    @Override
-    public void onClick(View v){
-        Intent intent = new Intent(this, AdmobBannerActivity.class);
-        switch (v.getId()){
-            case R.id.show_button:
-//                loadInterstitialAd();
-                Toast.makeText(this, "不加载插页广告", Toast.LENGTH_SHORT);
-                break;
-            case R.id.my_native_ad:
-                //facebook展示原生广告
-                intent.setClass(this, MyNativeAdActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.admob_banner_button:
-                intent.setClass(this, AdmobBannerActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.admob_interstitial_button:
-                intent.setClass(this, AdmobInterstitialActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.cloud_mobi_button:
-                intent.setClass(this, CloudMobiActivity.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
-        }
-
-    }
+}
 
 //    mRecyclerView = new RecyclerView(this);
 //    mRecyclerView = (RecyclerView)findViewById(R.id.my_rev);
@@ -170,4 +146,3 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        Toast.makeText(this, "点击了第"+section+"组"+"第"+position+"个", Toast.LENGTH_SHORT).show();
 //    }
 
-}

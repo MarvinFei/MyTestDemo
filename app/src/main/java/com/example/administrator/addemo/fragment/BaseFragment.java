@@ -7,21 +7,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.ButterKnife;
+//import butterknife.ButterKnife;
 
 /**
- * Created by Administrator on 2017/8/20.
+ * Created by LYF on 2017/8/20.
  */
 
 public abstract class BaseFragment extends Fragment{
 
+    private View baseView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutResId(), container, false);
-        ButterKnife.bind(this, view);
-        initView(view, savedInstanceState);
-        return view;
+//        ButterKnife.bind(this, view);
+        baseView = view;
+        initView(baseView, savedInstanceState);
+        return baseView;
     }
 
     public abstract int getLayoutResId();

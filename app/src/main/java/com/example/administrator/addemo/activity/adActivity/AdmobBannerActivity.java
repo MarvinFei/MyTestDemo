@@ -1,4 +1,4 @@
-package com.example.administrator.addemo.adActivity;
+package com.example.administrator.addemo.activity.adActivity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
