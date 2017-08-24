@@ -58,7 +58,7 @@ public class MainViewPageAdapter extends FragmentPagerAdapter {
             case 2:
                 return "三个";
             default:
-                return "四个";
+                return null;
         }
     }
 

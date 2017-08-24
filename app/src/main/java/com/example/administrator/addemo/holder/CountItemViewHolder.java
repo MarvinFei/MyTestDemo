@@ -25,7 +25,7 @@ public class CountItemViewHolder extends RecyclerView.ViewHolder {
 
     public CountItemViewHolder(View itemView, MyRecyclerAdapter.MyItemClickListener itemClickListener){
         super(itemView);
-        textView = (TextView) itemView.findViewById(R.id.title);
+        textView = (TextView) itemView.findViewById(R.id.item_title);
         imageView2 =(ImageView) itemView.findViewById(R.id.another_image);
         containerView = itemView.findViewById(R.id.container);
 

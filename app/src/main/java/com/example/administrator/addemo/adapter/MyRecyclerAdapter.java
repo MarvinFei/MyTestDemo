@@ -40,17 +40,9 @@ public class MyRecyclerAdapter extends SectionForRecyclerViewAdapter<CountHeader
 
     @Override
     protected int getItemCountForSection(int section) {
-        if (section == 0){
-            return 2;
-        }else{
             return section + 1;
-        }
     }
 
-    @Override
-    protected boolean hasHeaderInSection(int section) {
-        return true;
-    }
 
     @Override
     protected boolean hasFooterInSection(int section) {
@@ -78,28 +70,18 @@ public class MyRecyclerAdapter extends SectionForRecyclerViewAdapter<CountHeader
 
     @Override
     protected void onBindSectionHeaderViewHolder(CountHeaderViewHolder holder, int section) {
-
+        holder.render("Header " + (section + 1));
     }
 
     @Override
     protected void onBindSectionFooterViewHolder(CountFooterViewHolder holder, int section) {
-        if (section == 0){
-            holder.render("第一个section的footer");
-        } else {
-            holder.render("第" + section+1 + "个section的footer");
-        }
+        holder.render("第" + (section + 1) + "个section的footer");
     }
 
     protected int[] colors = new int[]{0xfff44336, 0xff2196f3, 0xff009688, 0xff8bc34a, 0xffff9800};
     @Override
     protected void onBindItemViewHolder(CountItemViewHolder holder, int section, int position) {
-
         holder.renderColor(String.valueOf(position + 1), colors[section] );
-
-//        Log.e("TAG", "onBindItemViewHolder: " + position+ "others");
-//        holder.renderColor(String.valueOf(position + 1), colors[section]);
-
-//        holder.render(String.valueOf(position + 1), colors[section]);
         holder.setupClick(section, position);
     }
 

@@ -11,15 +11,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.administrator.addemo.activity.NavigationViewActivity.manageActivity;
-import com.example.administrator.addemo.activity.adActivity.AdmobBannerActivity;
-import com.example.administrator.addemo.activity.adActivity.AdmobInterstitialActivity;
-import com.example.administrator.addemo.activity.adActivity.CloudMobiActivity;
-import com.example.administrator.addemo.activity.adActivity.MyNativeAdActivity;
+import com.example.administrator.addemo.activity.NavigationView.manageActivity;
 import com.example.administrator.addemo.adapter.MainViewPageAdapter;
 
 //import butterknife.BindView;
@@ -37,14 +30,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        MobileAds.initialize(this, ADMOB_ADDEMO_ID);
         initView();
-        createView();
+        createPageView();
     }
 
     private void initView(){
-
         Toolbar toolBar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolBar);
         toolBar.setTitle("ToolBar");//设置标题
@@ -73,10 +63,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 //
-    private void createView(){
+    private void createPageView(){
         mViewPager.setAdapter(new MainViewPageAdapter(this, this.getSupportFragmentManager()));
         mTabLayout.setupWithViewPager(mViewPager);
     }

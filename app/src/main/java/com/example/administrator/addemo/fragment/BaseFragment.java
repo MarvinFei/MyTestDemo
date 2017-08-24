@@ -16,17 +16,26 @@ import android.view.ViewGroup;
 public abstract class BaseFragment extends Fragment{
 
     private View baseView;
+    private ViewGroup parent;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(getLayoutResId(), container, false);
+        if (baseView == null){
+            baseView = inflater.inflate(getLayoutResId(), container, false);
+            initView(baseView, savedInstanceState);
+        } else {
+            parent = (ViewGroup) baseView.getParent();
+        }
+        if (parent != null) {
+            parent.removeView(baseView);
+        }
 //        ButterKnife.bind(this, view);
-        baseView = view;
-        initView(baseView, savedInstanceState);
         return baseView;
     }
 
     public abstract int getLayoutResId();
+
+    public abstract void initData();
 
     protected void initView(View view, Bundle savedInstanceState){}
 }

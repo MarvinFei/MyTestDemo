@@ -17,7 +17,7 @@ public class CountFooterViewHolder extends RecyclerView.ViewHolder {
 
     public CountFooterViewHolder(View itemView) {
         super(itemView);
-        textView = (TextView) itemView.findViewById(R.id.title);   //存疑
+        textView = (TextView) itemView.findViewById(R.id.foto_title);   //存疑
     }
     public void render(String text){
         textView.setText(text);

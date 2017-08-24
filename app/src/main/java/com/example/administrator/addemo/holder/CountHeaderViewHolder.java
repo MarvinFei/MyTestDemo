@@ -18,7 +18,7 @@ public class CountHeaderViewHolder extends RecyclerView.ViewHolder {
 
     public CountHeaderViewHolder(View itemView) {
         super(itemView);
-        textView =(TextView) itemView.findViewById(R.id.title);
+        textView =(TextView) itemView.findViewById(R.id.header_title);
 //        imageView=(ImageView) itemView.findViewById(R.id.rcv_image);
     }
 
