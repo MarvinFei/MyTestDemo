@@ -6,9 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.administrator.addemo.R;
+import com.example.administrator.addemo.adlayout.BigAdViewInPopLayout;
+import com.example.administrator.addemo.adloadhelper.AnimateNativeAdViewLayout;
+import com.example.administrator.addemo.config.Constants;
 import com.example.administrator.addemo.holder.CountFooterViewHolder;
 import com.example.administrator.addemo.holder.CountHeaderViewHolder;
 import com.example.administrator.addemo.holder.CountItemViewHolder;
+import com.example.administrator.addemo.listener.MyItemClickListener;
 
 /**
  * Created by Administrator on 2017/7/26.
@@ -35,12 +39,12 @@ public class MyRecyclerAdapter extends SectionForRecyclerViewAdapter<CountHeader
 
     @Override
     protected int getSectionCount() {
-        return 5;
+        return 3;
     }
 
     @Override
     protected int getItemCountForSection(int section) {
-            return section + 1;
+            return 1;
     }
 
 
@@ -65,12 +69,15 @@ public class MyRecyclerAdapter extends SectionForRecyclerViewAdapter<CountHeader
     @Override
     protected CountItemViewHolder onCreateItemViewHolder(ViewGroup parent, int viewType) {
         View view = getLayoutInflater().inflate(R.layout.view_count_item, parent, false);
+//        AnimateNativeAdViewLayout myFirst = new AnimateNativeAdViewLayout(parent.getContext(), new BigAdViewInPopLayout(parent.getContext()),
+//                Constants.AD_VIEW_PAGE_ONE_1, null);
+
         return new CountItemViewHolder(view, itemClickListener);
     }
 
     @Override
     protected void onBindSectionHeaderViewHolder(CountHeaderViewHolder holder, int section) {
-        holder.render("Header " + (section + 1));
+        holder.render("Header PageOne" + (section + 1));
     }
 
     @Override
@@ -81,11 +88,29 @@ public class MyRecyclerAdapter extends SectionForRecyclerViewAdapter<CountHeader
     protected int[] colors = new int[]{0xfff44336, 0xff2196f3, 0xff009688, 0xff8bc34a, 0xffff9800};
     @Override
     protected void onBindItemViewHolder(CountItemViewHolder holder, int section, int position) {
-        holder.renderColor(String.valueOf(position + 1), colors[section] );
+
+//        Context context = holder.itemView.getContext();
+        switch (section) {
+            case 0:
+                AnimateNativeAdViewLayout myFirst1 = new AnimateNativeAdViewLayout(mContext, new BigAdViewInPopLayout(mContext),
+                        Constants.AD_VIEW_PAGE_ONE_1, null);
+                holder.setAdLayout(myFirst1);
+                break;
+            case 1:
+                AnimateNativeAdViewLayout myFirst2 = new AnimateNativeAdViewLayout(mContext, new BigAdViewInPopLayout(mContext),
+                        Constants.AD_VIEW_PAGE_ONE_2, null);
+                holder.setAdLayout(myFirst2);
+                break;
+            case 2:
+                AnimateNativeAdViewLayout myFirst3 = new AnimateNativeAdViewLayout(mContext, new BigAdViewInPopLayout(mContext),
+                        Constants.AD_VIEW_PAGE_ONE_3, null);
+                holder.setAdLayout(myFirst3);
+                break;
+            default:
+                break;
+
+        }
         holder.setupClick(section, position);
     }
 
-    public interface MyItemClickListener {
-        void ItemClick(View view, int section, int position);
-    }
 }

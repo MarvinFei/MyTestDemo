@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -19,7 +21,9 @@ android {
     }
 }
 
+
 dependencies {
+
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -35,9 +39,12 @@ dependencies {
     compile 'com.google.firebase:firebase-ads:11.0.2'
     compile files('libs/cloudssp_1.7.6.jar')
     compile 'com.facebook.fresco:fresco:1.5.0'
-//
-//    compile 'com.jakewharton:butterknife:8.8.1'
-//    compile 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //
+    //    compile 'com.jakewharton:butterknife:8.8.1'
+    //    compile 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.android.support:multidex:1.0.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -4,10 +4,11 @@ import android.app.Application;
 import android.content.Context;
 
 import com.cloudtech.ads.core.CTService;
+import com.example.administrator.addemo.adloadhelper.NativeAdViewManager;
 import com.example.administrator.addemo.config.Config;
-import com.facebook.FacebookSdk;
-import com.facebook.ads.*;
+import com.facebook.drawee.backends.pipeline.BuildConfig;
 import com.facebook.drawee.backends.pipeline.Fresco;
+
 import com.google.android.gms.ads.MobileAds;
 
 
@@ -37,8 +38,16 @@ public class MyApplication extends Application {
 
 //        FacebookSdk.sdkInitialize(getApplicationContext());
 //        AdSettings.addTestDevice("61d1907283cdfd097af5a35b4eedf6bc");
-        MobileAds.initialize(this, ADMOB_ADDEMO_ID);
+        initAdSDK();
 
+
+    }
+
+    private void initAdSDK() {
+        //admob 初始化
+
+            NativeAdViewManager.getInstance().init(this, "http://10.0.12.118:8080/ad_emojikeyboard_config_v3_LYF_test.json", "ad_emojikeyboard_config_v3_LYF_test.json");
+            MobileAds.initialize(this, ADMOB_ADDEMO_ID);//admob 正式 app id
 
     }
 }

@@ -31,10 +31,10 @@ public class MainViewPageAdapter extends FragmentPagerAdapter {
                 type = Constants.MY_FRIST_TYPE;
                 break;
             case 1:
-                type = Constants.MY_FRIST_TYPE;
+                type = Constants.MY_SECOND_TYPE;
                 break;
             case 2:
-                type = Constants.MY_FRIST_TYPE;
+                type = Constants.MY_THIRD_TYPE;
                 break;
             default:
                 type = Constants.MY_FRIST_TYPE;

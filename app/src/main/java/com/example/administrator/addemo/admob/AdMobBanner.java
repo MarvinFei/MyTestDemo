@@ -8,7 +8,7 @@ import com.google.android.gms.ads.AdView;
 
 public class AdMobBanner  {
 
-    public static String ADMOD_BANNER_ID = "ca-app-pub-4562829771983924/4857561669";
+    public final String ADMOD_BANNER_ID = "ca-app-pub-4562829771983924/4857561669";
 
     private AdView adView;
 

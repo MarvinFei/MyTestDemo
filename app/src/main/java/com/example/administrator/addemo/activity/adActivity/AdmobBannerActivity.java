@@ -17,8 +17,6 @@ import com.google.android.gms.ads.AdView;
 
 public class AdmobBannerActivity extends AppCompatActivity {
 
-
-
     private AdView adView;
 
     @Override

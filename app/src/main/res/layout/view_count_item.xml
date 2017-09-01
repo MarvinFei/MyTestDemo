@@ -2,32 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    >
+    android:layout_height="330dp"
+    android:layout_margin="8dp">
 
-    <ImageView
-        android:id="@+id/another_image"
+    <LinearLayout
+        android:id="@+id/my_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <TextView
-        android:id="@+id/item_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textColor="@color/colorWhite"
-        android:textSize="42sp"
-        android:textStyle="bold"
-        android:textAllCaps="true"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        />
-
-
-
-
-
+        android:layout_height="330dp"
+        android:orientation="horizontal">
+    </LinearLayout>
 </RelativeLayout>

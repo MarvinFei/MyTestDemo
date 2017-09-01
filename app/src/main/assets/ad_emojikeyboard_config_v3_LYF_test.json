@@ -1,0 +1,95 @@
+{
+  "AdViewId": [
+    {
+      "fb_id": "a",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/9539620666",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native1",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "b",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/8484671244",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native2",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "c",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/8871861663",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native3",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "d",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/5862554948",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native11",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "e",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/6792493235",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native12",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "f",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/2661676539",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native13",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "g",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/5325043487",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native21",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "h",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/2278533151",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native22",
+      "ad_load_type": "admob"
+    },
+    {
+      "fb_id": "i",
+      "du_id": "135989",
+      "admob_id": "ca-app-pub-4562829771983924/9749829061",
+      "admob_ad_type": "nativeA",
+      "cache_time": "600",
+      "click_to_reload": "true",
+      "describe": "native23",
+      "ad_load_type": "admob"
+    }
+  ],
+  "updateCacheTime": "14400"
+}

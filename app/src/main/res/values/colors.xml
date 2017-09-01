@@ -6,6 +6,11 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="transParent">#00000000</color>
 
+    <color name="mainactivity_text_black_color">#333333</color>
+    <color name="mainactivity_bottom_text1_color">#FFBFBFBF</color>
+
+
+
 
     //导入源:http://www.2cto.com/kf/201211/166631.html
     <color name="white">#ffffff</color> <!-- 白色 -->

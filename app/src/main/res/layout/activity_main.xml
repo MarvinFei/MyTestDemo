@@ -33,13 +33,22 @@
             app:tabSelectedTextColor="#FFFFFF"
             app:tabTextColor="#FFFFFF"
             />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/main_viewpager"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </android.support.design.widget.AppBarLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/main_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <include
+                layout="@layout/redio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
+    </android.support.design.widget.AppBarLayout>
 
         <android.support.design.widget.NavigationView
             android:id="@+id/nav_view"

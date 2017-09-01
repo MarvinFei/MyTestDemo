@@ -1,4 +1,4 @@
-package com.example.administrator.addemo;
+package com.example.administrator.addemo.activity;
 
 import android.content.Context;
 import android.os.Bundle;

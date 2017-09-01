@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.administrator.addemo.BaseActivity;
+import com.example.administrator.addemo.activity.BaseActivity;
 import com.example.administrator.addemo.R;
 import com.example.administrator.addemo.activity.adActivity.AdmobBannerActivity;
 import com.example.administrator.addemo.activity.adActivity.AdmobInterstitialActivity;
